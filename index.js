@@ -31,13 +31,15 @@ if (e.target.className.includes("call-btn")) {
   const historyContainer = getElement("History-container");
   const History = document.createElement("div");
   History.innerHTML = `
-    <div class="bg-[#FAFAFA] flex justify-between rounded-xl items-center p-4">
-      <div>
-        <h1></h1>${emergencyTitle}
-        <p>${emergencyNumber}</p>
-      </div>
-      <div>${timeString}</div>
-    </div>
+       <div class="bg-[#FAFAFA] flex justify-between rounded-xl items-center p-4">
+<div>
+    <h1 class="font-semibold text-[18px]">${emergencyTitle}</h1>
+    <p>${emergencyNumber}</p>
+</div>
+<div class="text-[18px]">
+    ${timeString}
+</div>
+                </div>
   `;
 
   alert(`📞 calling ${emergencyNumber}...`);
